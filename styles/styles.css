@@ -1,0 +1,161 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: var(--ff-primary);
+    margin: 0;
+    padding: 0;
+    background-color: var(--cl-primary);
+}
+
+/* Roots */
+:root {
+    --cl-primary: #263238;
+    --cl-font-primary: #fff8e8;
+    --cl-font-secundary: #90a4ae;
+    --cl-spans: #ca2621;
+    --cl-btn-primary: #babdc3; 
+
+    --ff-primary: 'AmarilloUSAF', sans-serif;
+
+    --fs-title: 80px;
+    --fs-primary-p: 30px;
+    --fs-primary-h5: 25px;
+    --fs-primary-h6: 25px;
+}
+
+h2 {
+    font-size: var(--fs-title);
+}
+
+h5 {
+    font-size: var(--fs-primary-h5);
+    color: var(--cl-font-primary);
+}
+
+h6 {
+    font-size: var(--fs-primary-h6);
+    color: var(--cl-font-primary);
+}
+
+span {
+    color: var(--cl-spans);
+}
+
+main {
+    height: 100vh;
+}
+
+/* Game Buttons */ 
+.btn {
+    color: var(--cl-font-primary);
+	width: 200px;
+	padding: .60em 0.30em;
+	color: var(--cl-white);
+	cursor: pointer;
+	font-size: 15px;
+	display: block;
+	letter-spacing: .1em;
+	margin: 10px auto;
+    border: 1px solid var(--cl-btn-primary);
+}
+
+.btn:hover {
+    color: var(--cl-spans);
+}
+
+.buttons {
+    color: var(--cl-font-primary);
+}
+
+/* Game Menu */
+.mainMenu {
+    width: 100%;
+    text-align: center;  
+    color: var(--cl-font-primary);
+}
+
+/* Game Board and Cards */
+.boardContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid {
+    max-width: 460px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 136px;
+    width: 100px;
+}
+
+.match {
+    background-image: none !important;
+}
+
+.card {
+    position: relative;
+    transition: all 0.4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 136px;
+  width: 100px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+    background: #ca2621 url('../images/logo.png') no-repeat center center / contain;
+    border-radius: 5px;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: var(--cl-primary);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.selected {
+    transform: rotateY(180deg);
+}
+  
+.match .front {
+    background: transparent !important;
+}
+
+/* Display single player and multi player status on board game */
+.displayNameSinglePlayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Display in game buttons */

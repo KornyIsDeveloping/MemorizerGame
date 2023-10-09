@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="http://fonts.cdnfonts.com/css/amarillo-usaf" rel="stylesheet">
+    <title>Memo Game with Tanks</title>
+</head>
+<body>
+    <!-- Main -->
+    <main style="height: 100vh;">
+        <div class="container d-flex flex-column justify-content-center align-items-center h-100">
+            <div class="mainMenu">
+                <h2>Memorizer <span>Mind </span>Game</h2>
+                <button class="btn btn-rouded d-md-inline-block mx-auto d-block ml-0" id="SinglePlayer">Singleplayer</button>
+                <button class="btn btn-rouded d-md-inline-block mx-auto d-block ml-0 ml-md-2" id="MultiPlayer">Multiplayer</button>
+                <button class="btn btn-rouded d-md-inline-block mx-auto d-block ml-0 ml-md-2" id="Settings">Settings</button>
+            </div>
+            <!-- Single Player input name -->
+            <div class="inputNameSinglePlayer" id="inputNameForSinglePlayer">
+                <!-- Single Player -->
+                <div class="singlePlayer">
+                    <h5>Choose name for your <span>Player </span></h5>
+                    <input class="d-inline-block w-100 mb-3 mb-md-4" type="text" id="playerNameSingle" placeholder="Name..." required="required">
+                    <div class="buttons d-md-flex">
+                        <button class="btn btn-rouded d-block mb-4 m-md-1" id="playSinglePlayer">Play</button>
+                        <button class="btn btn-rouded d-block ml-md-4 m-md-1" id="menuSinglePlayer">Menu</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Multi Player input names -->
+            <div class="inputNameMultiPlayer" id="inputNameForMultiPlayer">
+                <!-- Multi Player -->
+                <div class="multiPlayer">
+                    <h5>Choose name for <span>Player </span>One</h5>
+                    <input class="d-inline-block w-100 mb-3 mb-md-4" type="text" id="playerNameMulti1" placeholder="Name...">
+                    <h5>Choose name for <span>Player </span>Two</h5>
+                    <input class="d-inline-block w-100 mb-3 mb-md-4" type="text" id="playerNameMulti2" placeholder="Name...">
+                    <div class="buttons d-md-flex">
+                        <button class="btn btn-rouded d-block mb-4 m-md-1" id="playMultiPlayer">Play</button>
+                        <button class="btn btn-rouded d-block ml-md-4 m-md-1" id="menuMultiPlayer">Menu</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Game Settings -->
+            <div class="settings" id="settingGame">
+                <h5>Choose your <span>Board </span>Type</h5>
+                <div class="buttons mt-3 mb-5 d-md-flex">
+                    <button class="btn btn-rouded d-block mb-4 m-md-1" id="gameMode3x4">3 rows X 4 columns</button>
+                    <button class="btn btn-rouded d-block ml-md-4 m-md-1" id="gameMode4x4">4 rows X 4 columns</button>
+                </div>
+                <h5>Choose your <span>Cards </span>Theme</h5>
+                <div class="buttons mt-3 mb-5 d-md-flex">
+                    <button class="btn btn-rouded d-block mb-4 m-md-1" id="cardsTheme1"><span class="theme1"></span>Panzer IV</button>
+                    <button class="btn btn-rouded d-block ml-md-4 m-md-1" id="cardsTheme2"><span class="theme2"></span>Halloween</button>
+                    <button class="btn btn-rouded d-block ml-md-4 m-md-1" id="cardsTheme3"><span class="theme3"></span>theme 3</button>
+                    <button class="btn btn-rouded d-block ml-md-4 m-md-1" id="cardsTheme4"><span class="theme4"></span>theme 4</button>
+                </div>
+                <div class="buttons mt-4 justify-content-center d-md-flex">
+                    <button class="btn btn-rouded d-block ml-md-4 m-md-1" id="settingsMenu">Menu</button>
+                </div>
+            </div>
+                <div class="boardContent">
+                        <!-- Game Board -->
+                    <!-- Display Single Player Status -->
+                    <div class="displayNameSinglePlayer" id="gameStatusSinglePlayer">
+                        <h5>Now plays <span id="outpuNameSinglePlayer"></span></5>
+                        <h6>Flips: <span id="flipsSinglePlayer">0</span></h6>
+                    </div>
+                    <!-- Display Multi Player Status -->
+                    <div class="displayNameMultiPlayer1" id="gameStatusMultiPlayer1">
+                        <h5>Now plays <span id="outpuNameMultiPlayer1">...</span></5>
+                        <h6>Flips: <span id="flipsMultiPlayer1">0</span></h6>
+                    </div>
+                    <div class="displayNameMultiPlayer2" id="gameStatusMultiPlayer2">
+                        <h5>Now plays <span id="outpuNameMultiPlayer2">...</span></5>
+                        <h6>Flips: <span id="flipsMultiPlayer2">0</span></h6>
+                    </div>
+                    <!-- Game Grid -->
+                        <div class="gameBoard" id="game"></div>
+                    <!-- In Game Buttons -->
+                        <div class="inGameButtons justify-content-center" id="gameButtons">
+                            <div class="buttons mt-4 justify-content-center d-md-flex">
+                                <button class="btn btn-rouded d-block mb-4 m-md-1" id="refreshTable">Refresh</button>
+                                <button class="btn btn-rouded d-block ml-md-4 m-md-1" id="menu">Menu</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <!-- Script -->
+    <script src="../scripts/script.js" defer ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
